@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   # helper  SmartListing::Helper
 
-  include FlashMessages
+  include FlashManager
   # include Pundit
   # include SmartListing::Helper::ControllerExtensions
   # include SmartListingManager
