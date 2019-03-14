@@ -1,5 +1,5 @@
 source 'https://rubygems.org' # RubyGems.org is the Ruby community’s gem hosting service
-ruby '2.3.0' # https://www.ruby-lang.org/en/documentation/
+ruby '2.6.0' # https://www.ruby-lang.org/en/documentation/
 
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
