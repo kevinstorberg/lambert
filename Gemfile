@@ -22,9 +22,9 @@ gem 'uglifier', '>= 1.3.0' # Ruby wrapper for UglifyJS JavaScript compressor
 # Admin ========================================================================
 # ==============================================================================
 gem 'bootsnap', '>= 1.1.0', require: false # reduces boot times through caching
-# gem "rails-settings-cached", "~> 0.7.1" # manage settings with Ruby on Rails
+gem "rails-settings-cached" # manage settings with Ruby on Rails
 # gem "rollbar", "~> 2.18.0" # exception tracking and logging from Ruby to Rollbar
-gem 'snoop_dogg', '~> 0.1.3' # A nicer way to see models
+gem 'snoop_dogg' # A nicer way to see models
 gem 'turbolinks', '~> 5' # navigate application faster: github.com/turbolinks/turbolinks
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby] # for zoneinfo files with Windows
 
@@ -50,8 +50,8 @@ gem "js_cookie_rails", "~> 2.2.0" # adds js-cookie to the Rails asset pipeline
 # ==============================================================================
 # Forms ========================================================================
 # ==============================================================================
-# gem "cocoon", "~> 1.2.11" # for dynamic nested forms using jQuery
-# gem "trix", "~> 0.11.1" # rich text editor for everyday writing
+gem "cocoon", "~> 1.2.11" # for dynamic nested forms using jQuery
+gem "trix" # rich text editor for everyday writing
 
 # ==============================================================================
 # File Reading, Uploading, And Generation ======================================
@@ -65,15 +65,15 @@ gem "js_cookie_rails", "~> 2.2.0" # adds js-cookie to the Rails asset pipeline
 # ==============================================================================
 # gem "delayed_job_active_record", "~> 4.1.3" # ActiveRecord backend integration for DelayedJob 3.0+
 # gem "fog", "~> 2.0.0" # cloud services library
-# gem 'friendly_id', '~> 5.1.0' # create pretty URLs with human-friendly strings
+gem 'friendly_id', '~> 5.1.0' # create pretty URLs with human-friendly strings
 # gem "i18n", "~> 0.7" # internationalization (i18n) library for Ruby
 # gem "paper_trail", "~> 10.0.1" # track changes to your rails models
 
 # ==============================================================================
 # Searching/Sorting ============================================================
 # ==============================================================================
-# gem "search_cop", "~> 1.0.9" # search engine like fulltext query support for ActiveRecord
-# gem "smart_listing", "~> 1.2.2" # data listing gem with built-in sorting, filtering and in-place editing
+gem "search_cop", "~> 1.0.9" # search engine like fulltext query support for ActiveRecord
+gem "smart_listing" # data listing gem with built-in sorting, filtering and in-place editing
 
 # ==============================================================================
 # APIs & Integratons ===========================================================
