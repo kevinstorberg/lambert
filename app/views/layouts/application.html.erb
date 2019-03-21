@@ -10,6 +10,10 @@
   </head>
 
   <body>
+    <div class="background-light-blue"></div>
+    <div class="background-dark-blue"></div>
+    <div class="background-lightest-blue"></div>
+    
     <%= render :partial => 'layouts/navbar' %>
 
     <%- flash.each do |name, msg| %>
@@ -19,9 +23,11 @@
       </div>
     <% end %>
 
-    <%= yield %>
+    <div class="container-fluid">
+      <%= yield %>
+    </div>
 
     <%= render :partial => 'layouts/footer' %>
-    
+
   </body>
 </html>

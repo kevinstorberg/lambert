@@ -10,7 +10,6 @@
       margin: 0 auto;
       width: 100%;
       .home-page-boxes {
-        border: 6px solid #163e5b;
         margin: 0 auto;
         margin: 10px;
         .form-container {
@@ -18,15 +17,15 @@
           margin: 14px;
           text-align: center;
           form {
-            background: linear-gradient(to left, #F9F8F6, #E9E4DE);
+            background: white;
             padding-top: 10px;
             h5 {
-              color: #707070;
+              color: #163e5b !important;
             }
-            input {
+            input, textarea {
               border: 1px solid #707070;
               border-radius: 3px;
-              color: rgba(112, 112, 112, 0.5);
+              color: #163e5b !important;
               font-size: 14px;
               margin: 3px;
               padding-left: 5px;
@@ -40,7 +39,7 @@
           }
         }
         .address-container {
-          background: linear-gradient(to right, #F9F8F6, #E9E4DE);
+          background: white;
           border: 1px solid #163e5b;
           height: 240px;
           margin: 14px;
@@ -76,6 +75,8 @@
       }
       #carousel-container {
         margin: 0 auto;
+        padding: 0;
+        width: 100%;
         .carousel {
           margin: 0 auto;
           padding-bottom: 14px;
@@ -104,37 +105,6 @@
         }
       }
     }
-  }
-  .background-lightest-blue {
-    background-color: #163e5b;
-    height: 300px;
-    opacity: .1;
-    position: absolute;
-    top: 0;
-    transform: rotate(-80deg);
-    width: 100%;
-    z-index: -100;
-  }
-  .background-light-blue {
-    background-color: #163e5b;
-    height: 500px;
-    margin-left: -50px;
-    opacity: .2;
-    position: absolute;
-    transform: rotate(20deg);
-    width: 100%;
-    z-index: -100;
-  }
-  .background-dark-blue {
-    background-color: #163e5b;
-    height: 700px;
-    opacity: .4;
-    position: absolute;
-    margin-top: -162px;
-    top: 0px;
-    transform: rotate(76deg);
-    width: 100%;
-    z-index: -100;
   }
 }
 
