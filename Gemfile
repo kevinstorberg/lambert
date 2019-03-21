@@ -31,7 +31,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby] # for zoneinf
 # ==============================================================================
 # Authentication & Authorization ===============================================
 # ==============================================================================
-gem "devise", "~> 4.5.0" # flexible authentication solution for Rails with Warden
+gem "devise", ">= 4.6.0" # flexible authentication solution for Rails with Warden
 gem "devise-bootstrap-views", "~> 1.1.0" # Devise Bootstrap views with i18n support
 gem "pundit", "~> 2.0.0" # minimal authorization through OO design and pure Ruby classes
 # gem "recaptcha", "~> 4.12.0", require: "recaptcha/rails" # ReCaptcha helpers for ruby apps
@@ -40,7 +40,7 @@ gem "pundit", "~> 2.0.0" # minimal authorization through OO design and pure Ruby
 # Assets =======================================================================
 # ==============================================================================
 gem 'bootstrap', '~> 4.3.1'
-gem "bootstrap-sass", "~> 3.3.7" # official Sass port of Bootstrap 2 and 3
+gem "bootstrap-sass", ">= 3.4.1" # official Sass port of Bootstrap 2 and 3
 gem 'bootstrap-select-rails' # assets for bootstrap-select
 gem "font-awesome-rails", "~> 4.7.0.4" # font-awesome for asset pipeline
 gem "jquery-rails", "~> 4.3.3" # automate using jQuery with Rails

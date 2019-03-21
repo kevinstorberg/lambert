@@ -12,9 +12,16 @@
   <body>
     <%= render :partial => 'layouts/navbar' %>
 
+    <%- flash.each do |name, msg| %>
+      <div class="alert alert-dismissable <%= alert_class(name) %>">
+        <button class="close" type="button" data-dismiss="alert" aria-hidden="true" &times;></button>
+        <%= raw(msg) %>
+      </div>
+    <% end %>
+
     <%= yield %>
 
     <%= render :partial => 'layouts/footer' %>
-
+    
   </body>
 </html>
