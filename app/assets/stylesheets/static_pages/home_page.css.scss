@@ -138,7 +138,7 @@
   }
 }
 
-@media (max-width: 990px) {
+@media (max-width: 991px) {
   #home-page {
     #home-page-container {
       .home-page-row {
@@ -167,6 +167,19 @@
     .background-dark-blue {
       margin-left: -162px;
       transform: rotate(120deg);
+    }
+    .address-container {
+      .contact-info {
+        p {
+          font-size: 12px !important;
+        }
+      }
+      .info-email {
+        margin: 20px 0 0 10px !important;
+      }
+      .info-phone {
+        margin: 20px 10px 0 0 !important;
+      }
     }
   }
 }
@@ -203,6 +216,23 @@
   #home-page {
     .background-dark-blue {
       height: 500px;
+    }
+  }
+}
+
+@media (max-width: 363px) {
+  #home-page {
+    .background-lightest-blue {
+      margin-left: -60px;
+    }
+    .address-container {
+      height: 264px !important;
+      .info-email {
+        margin: 20px 0 0 10px !important;
+      }
+      .info-phone {
+        margin: 20px 10px 0 0 !important;
+      }
     }
   }
 }
