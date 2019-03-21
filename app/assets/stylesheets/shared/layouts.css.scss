@@ -1,0 +1,93 @@
+// =============================================================================
+// NavBar Styles ===============================================================
+// =============================================================================
+.navbar {
+  background: linear-gradient(to right, #F9F8F6, #E9E4DE);
+  #navbar-brand {
+    line-height: 20px;
+    margin-left: 60px;
+    text-align: center;
+    .nav-title {
+      color: #384853;
+    }
+  }
+  #navbar-brand:hover {
+    cursor: pointer;
+  }
+  #nav-link-button-container {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 70px;
+    top: 18px;
+    .navbar-nav {
+      text-align: center;
+      z-index: 1000000 !important;
+      .nav-item {
+        list-style: none;
+        .nav-link {
+          color: #707070;
+          font-size: 18px;
+          opacity: .8;
+        }
+        .nav-link:hover {
+          color: #384853;
+          cursor: pointer;
+          opacity: 1;
+          text-decoration: underline;
+        }
+      }
+      .nav-break {
+        color: #384853;
+        font-size: 20px;
+        margin: 6px 10px 20px 10px;
+      }
+    }
+  }
+}
+@media (max-width: 990px) {
+  .navbar {
+    .navbar-nav {
+      background: linear-gradient(#E9E4DE, #F9F8F6);
+      border-radius: 3px;
+      padding: 10px;
+    }
+    .nav-break {
+      display: none;
+    }
+  }
+}
+
+// =============================================================================
+// Footer Styles ===============================================================
+// =============================================================================
+#footer-container {
+  background: linear-gradient(to left, #F9F8F6, #E9E4DE);
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  #footer-info-container {
+    .footer {
+      padding-top: 14px;
+      text-align: center;
+      .footer-item {
+        display: inline-block;
+        list-style: none;
+        .footer-link {
+          color: #707070;
+          font-size: 14px;
+          opacity: .8;
+        }
+        .footer-link:hover {
+          color: #384853;
+          opacity: 1;
+        }
+      }
+      .footer-break {
+        color: #384853;
+        font-size: 16px;
+        margin: -8px 5px 0px 5px;
+      }
+    }
+  }
+}

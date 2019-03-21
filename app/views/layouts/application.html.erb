@@ -10,6 +10,7 @@
   </head>
 
   <body>
+    <%= render :partial => 'layouts/navbar' %>
 
     <%- flash.each do |name, msg| %>
       <div class="alert alert-dismissable <%= alert_class(name) %>">
@@ -20,5 +21,7 @@
 
     <%= yield %>
 
+    <%= render :partial => 'layouts/footer' %>
+    
   </body>
 </html>
