@@ -10,16 +10,16 @@
       margin: 0 auto;
       width: 100%;
       .home-page-boxes {
-        margin: 0 auto;
         border: 6px solid #163e5b;
+        margin: 0 auto;
         margin: 10px;
         .form-container {
           border: 1px solid #163e5b;
           margin: 14px;
           text-align: center;
           form {
-            padding-top: 10px;
             background: linear-gradient(to left, #F9F8F6, #E9E4DE);
+            padding-top: 10px;
             h5 {
               color: #707070;
             }
@@ -40,12 +40,12 @@
           }
         }
         .address-container {
-          padding-top: 10px;
-          border: 1px solid #163e5b;
-          margin: 14px;
-          text-align: center;
-          height: 240px;
           background: linear-gradient(to right, #F9F8F6, #E9E4DE);
+          border: 1px solid #163e5b;
+          height: 240px;
+          margin: 14px;
+          padding-top: 10px;
+          text-align: center;
           h5 {
             color: #707070;
           }
@@ -63,13 +63,13 @@
             text-align: center;
           }
           .info-email {
-            margin: 20px 0 0 24px;
             float: left;
+            margin: 20px 0 0 24px;
             text-align: left;
           }
           .info-phone {
-            margin: 20px 24px 0 0;
             float: right;
+            margin: 20px 24px 0 0;
             text-align: right;
           }
         }
@@ -84,8 +84,8 @@
             margin-top: 16px;
             .carousel-item {
               .carousel-caption {
-                margin-top: -10px;
                 margin-left: -60px;
+                margin-top: -10px;
                 text-align: left;
                 h5 {
                   font-size: 20px;
@@ -107,34 +107,34 @@
   }
   .background-lightest-blue {
     background-color: #163e5b;
-    position: absolute;
-    width: 100%;
     height: 300px;
     opacity: .1;
+    position: absolute;
     top: 0;
-    z-index: -100;
     transform: rotate(-80deg);
+    width: 100%;
+    z-index: -100;
   }
   .background-light-blue {
-    margin-left: -50px;
     background-color: #163e5b;
-    position: absolute;
-    width: 100%;
     height: 500px;
+    margin-left: -50px;
     opacity: .2;
-    z-index: -100;
+    position: absolute;
     transform: rotate(20deg);
+    width: 100%;
+    z-index: -100;
   }
   .background-dark-blue {
-    margin-top: -162px;
     background-color: #163e5b;
-    position: absolute;
-    top: 0px;
-    width: 100%;
     height: 700px;
     opacity: .4;
-    z-index: -100;
+    position: absolute;
+    margin-top: -162px;
+    top: 0px;
     transform: rotate(76deg);
+    width: 100%;
+    z-index: -100;
   }
 }
 

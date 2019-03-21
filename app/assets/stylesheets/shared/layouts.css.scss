@@ -4,9 +4,9 @@
 .navbar {
   background: linear-gradient(to right, #F9F8F6, #E9E4DE);
   #navbar-brand {
+    line-height: 20px;
     margin-left: 60px;
     text-align: center;
-    line-height: 20px;
     .nav-title {
       color: #384853;
     }
@@ -22,6 +22,7 @@
     top: 18px;
     .navbar-nav {
       text-align: center;
+      z-index: 1000000 !important;
       .nav-item {
         list-style: none;
         .nav-link {
@@ -46,6 +47,11 @@
 }
 @media (max-width: 990px) {
   .navbar {
+    .navbar-nav {
+      background: linear-gradient(#E9E4DE, #F9F8F6);
+      border-radius: 3px;
+      padding: 10px;
+    }
     .nav-break {
       display: none;
     }
@@ -62,7 +68,7 @@
   padding: 0;
   #footer-info-container {
     .footer {
-      margin-top: 14px;
+      padding-top: 14px;
       text-align: center;
       .footer-item {
         display: inline-block;
