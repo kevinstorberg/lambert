@@ -2,12 +2,12 @@ class ApplicationController < ActionController::Base
   # helper  SmartListing::Helper
 
   include FlashManager
-  # include Pundit
+  include Pundit
   # include SmartListing::Helper::ControllerExtensions
   # include SmartListingManager
 
-  # protect_from_forgery prepend: true
-  # rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
+  protect_from_forgery prepend: true
+  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
   @@crud_actions  = [:show, :new, :create, :edit, :update, :destroy]
   @@cruds_actions = [:index, :show, :new, :create, :edit, :update, :destroy]
