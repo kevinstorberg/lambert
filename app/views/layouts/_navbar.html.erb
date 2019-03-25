@@ -12,23 +12,25 @@
     <ul class="navbar-nav">
 
       <li class="nav-item">
-        <a class="nav-link" href="#">Home</a>
+        <%= link_to "Home", root_url, class: "nav-link" %>
       </li>
 
       <li class="nav-item nav-break">|</li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Family</a>
+        <%= link_to "Contact", contact_us_path, remote: true, class: "nav-link" %>
       </li>
 
-      <li class="nav-item nav-break">|</li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Personal</a>
-      </li>
-
-      <li class="nav-item nav-break">|</li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Contact</a>
-      </li>
+      <%- if current_user.present? %>
+        <li class="nav-item nav-break">|</li>
+        <li class="nav-item">
+          <%= link_to 'Log Out', destroy_user_session_path, method: :delete, class: "nav-link" %>
+        </li>
+      <% else %>
+        <li class="nav-item nav-break">|</li>
+        <li class="nav-item">
+          <%= link_to 'Sign In', new_user_session_path, class: "nav-link" %>
+        </li>
+      <% end %>
     </ul>
   </div>
 </nav>

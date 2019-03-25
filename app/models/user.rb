@@ -1,12 +1,18 @@
 class User < ApplicationRecord
   include RailsSettings::Extend
-  
+
   devise :database_authenticatable, :recoverable,
          :registerable, :rememberable, :validatable
 
   validates_presence_of :email, :first_name, :last_name
 
+  def full_name(flip = false)
+    flip ? "#{last_name}, #{first_name}" : "#{first_name} #{last_name}"
+  end
 
+  # ============================================================================
+  # ROLES ======================================================================
+  # ============================================================================
   def self.role_types
     {
       admin: "Admin",
@@ -15,7 +21,7 @@ class User < ApplicationRecord
     }
   end
 
-  def full_name(flip = false)
-    flip ? "#{last_name}, #{first_name}" : "#{first_name} #{last_name}"
+  def any_admin?
+    ['admin', 'super_admin'].include? role
   end
 end

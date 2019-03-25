@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  before_action :set_user,      only: @@crud_actions
+  before_action :set_user,       only: @@crud_actions
   before_action :authorize_user, only: @@crud_actions
 
   def index
@@ -14,20 +14,38 @@ class UsersController < ApplicationController
   end
 
   def create
+    @user.assign_attributes(user_params)
+    if @user.save
+      flash_message('success')
+    else
+      flash_message('alert')
+    end
+
+    redirect_back fallback_location: root_url
   end
 
   def edit
   end
 
   def update
+    @user.assign_attributes(user_params)
+    if @user.save
+      flash_message('success')
+    else
+      flash_message('alert')
+    end
+
+    redirect_back fallback_location: root_url
   end
 
   def destroy
     if @user.destroy?
-      
+      flash_message('success')
     else
-
+      flash_message('alert')
     end
+
+    redirect_back fallback_location: root_url
   end
 
   private
