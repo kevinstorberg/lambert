@@ -9,7 +9,7 @@ class StaticPagesController < ApplicationController
   def team
   end
 
-  def contact_us
+  def contact
     render 'contact.js'
   end
 end
