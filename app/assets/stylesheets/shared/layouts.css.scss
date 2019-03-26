@@ -93,3 +93,22 @@
     }
   }
 }
+
+// =============================================================================
+// Modal =======================================================================
+// =============================================================================
+.modal-body {
+  background-color: rgba(68,84,95,.8);
+  border: 1px solid white;
+  margin: 20px;
+  padding-top: 30px;
+}
+
+.modal-button {
+  background-color: white;
+  border: 1px solid black;
+}
+
+.modal-content {
+  background-color: rgba(0,23,38,.75);
+}

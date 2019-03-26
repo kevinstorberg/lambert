@@ -18,39 +18,7 @@ body {
   width: 100%;
 }
 
-.themed-border {
-  border: 6px solid #163e5b;
-}
-
-.background-lightest-blue {
-  background-color: #003566;
-  height: 600px;
-  opacity: .4;
-  position: absolute;
-  top: 50px;
-  transform: rotate(150deg);
-  width: 100%;
-  z-index: 0;
-}
-.background-light-blue {
-  background-color: #00284d;
-  height: 400px;
-  // margin-left: -50px;
-  opacity: .4;
-  position: absolute;
-  top: 50px;
-  transform: rotate(100deg);
-  width: 100%;
-  z-index: 0;
-}
-.background-dark-blue {
-  background-color: #001a33;
-  height: 200px;
-  opacity: .4;
-  position: absolute;
-  // margin-top: -162px;
-  top: 50px;
-  transform: rotate(70deg);
-  width: 100%;
-  z-index: 0;
+.form-group.required .control-label:after {
+  content:"*";
+  color:red;
 }
