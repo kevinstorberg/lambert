@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  background-image: url(image-url("background.jpg"));
+  background-image: image-url("background.jpg");
   min-height: 100%;
   padding: 0;
   width: 100%;
