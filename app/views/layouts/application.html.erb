@@ -14,7 +14,7 @@
     <%= render partial: '/layouts/navbar' %>
 
     <%- flash.each do |name, msg| %>
-      <div class="alert alert-dismissable <%= name.to_s %>">
+      <div class="alert side-margin <%= "alert-success" %>">
         <button class="close" type="button" data-dismiss="alert" aria-hidden="true" &times;></button>
         <%= raw(msg) %>
       </div>
@@ -30,3 +30,7 @@
 
   </body>
 </html>
+
+<script>
+  slideUpMessages();
+</script>

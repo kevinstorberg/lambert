@@ -110,3 +110,16 @@
 .modal-content, .form-content {
   background-color: rgba(0, 23, 38, 0.75) !important;
 }
+
+// =============================================================================
+// Flash Messages ==============================================================
+// =============================================================================
+.alert-danger {
+  border: 1px solid darkred;
+}
+
+.alert-success {
+  background-color: rgba(0, 23, 38, 0.75);
+  border: 1px solid darkblue;
+  color: white;
+}
