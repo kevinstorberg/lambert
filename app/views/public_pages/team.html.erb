@@ -1,0 +1,51 @@
+<h4>| Our Team</h4>
+
+</br>
+
+<div id="team-bio-container">
+  <%- if @team.any? %>
+    <%- @team.each_with_index do |member, index| %>
+      <div class="row">
+
+        <div class="col-xs-12">
+          <div class="media team-member">
+            <div class="team-image-container">
+              <%= image_tag "horse_teeth.jpg", class: "mr-3" %>
+              <h5><%= member.full_name %></h5>
+            </div>
+            <div class="media-body">
+              <h4 class="mt-0"><%= member.titles %></h4>
+
+              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+              Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+              Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+              <div class="accordion bio-accordion" id="bio-accordion-<%= index %>">
+                <div class="card bio-card">
+                  <div class="card-header bio-heading" id="bio-heading-<%= index %>">
+                    <h2 class="mb-0">
+                      <button class="btn" type="button" data-toggle="collapse" data-target="#bio-collapse-<%= index %>" aria-expanded="true" aria-controls="bio-collapse-<%= index %>">
+                        See More. . .
+                      </button>
+                    </h2>
+                  </div>
+
+                  <div id="bio-collapse-<%= index %>" class="collapse" aria-labelledby="bio-heading-<%= index %>" data-parent="#bio-accordion-<%= index %>">
+                    <div class="card-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                      non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                      sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+                      craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+                      Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    <% end %>
+  <% end%>
+</div>

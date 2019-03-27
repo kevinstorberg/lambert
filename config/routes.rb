@@ -6,9 +6,9 @@ Rails.application.routes.draw do
     root to: "users#show"
   end
 
-  root to: 'static_pages#home'
+  root to: 'public_pages#home'
 
-  get '/about',   to: 'static_pages#about',   as: 'about'
-  get '/contact', to: 'static_pages#contact', as: 'contact'
-  get '/team',    to: 'static_pages#team',    as: 'team'
+  get '/about',   to: 'public_pages#about',   as: 'about'
+  get '/contact', to: 'public_pages#contact', as: 'contact'
+  get '/team',    to: 'public_pages#team',    as: 'team'
 end

@@ -1,4 +1,4 @@
-class StaticPagesController < ApplicationController
+class PublicPagesController < ApplicationController
 
   def home
   end
@@ -7,6 +7,7 @@ class StaticPagesController < ApplicationController
   end
 
   def team
+    @team = User.team
   end
 
   def contact

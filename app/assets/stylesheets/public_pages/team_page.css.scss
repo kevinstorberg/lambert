@@ -1,0 +1,31 @@
+#team-bio-container {
+  padding: 20px;
+  // background-color: #f7f7f7;
+  // background-color: #e2e8ec;
+  background-color: white;
+  // border: 2px solid #dcdac4;
+  border: 1px solid black;
+  border-radius: 2px;
+  box-shadow: 2px 2px silver;
+  // border: 20px solid white;
+}
+
+.team-image-container {
+  text-align: center;
+  h5 {
+    background-color: #dcdac4;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-right: 16px;
+  }
+}
+
+.bio-card {
+  border: none;
+  color: black;
+}
+
+.bio-heading {
+  border: none;
+  background-color: white;
+}
