@@ -1,9 +1,8 @@
 @import 'bootstrap';
 @import 'font-awesome';
 
-@import 'shared/layouts';
-
 @import 'public_pages/*';
+@import 'shared/*';
 
 html {
   padding: 0;
@@ -19,8 +18,8 @@ body {
 }
 
 .form-group.required .control-label:after {
-  content:"*";
-  color:red;
+  content: "*";
+  color: red;
 }
 
 .side-margin {

@@ -1,1 +1,12 @@
+<!-- <h4>| Welcome <%= current_user.first_name  if current_user.present? %></h4> -->
+<div id="users-show-container">
+  <% if current_user.present? && current_user.any_admin? %>
+    <div class="col-xs-4">
+      <%= render partial: '/layouts/sidebar', locals: {  } %>
+    </div>
 
+    <div class="col-xs-8">
+
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,16 @@
+<div id="sidebar-wrapper" class="content-shadow">
+  <div class="content-wrapper" style="padding: 18px;">
+    <ul id="sidebar-menu" class="content-body" style="padding: 10px;">
+      <li>
+        <%= link_to "Profile", edit_user_path(current_user), class: "btn content-button", style: "width: 100%;" %>
+      </li>
+
+      <li>
+        <%= link_to "Users", users_path, class: "btn content-button", style: "width: 100%;" %>
+      </li>
+      <li>
+        <%= link_to "Services", users_path, class: "btn content-button", style: "width: 100%;" %>
+      </li>
+    </ul>
+  </div>
+</div>
