@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  background-image: url(asset_path("/assets/background.jpg"));
+  background-image: url(image-url("/assets/background.jpg"));
   min-height: 100%;
   padding: 0;
   width: 100%;
