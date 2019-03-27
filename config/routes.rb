@@ -11,4 +11,7 @@ Rails.application.routes.draw do
   get '/about',   to: 'public_pages#about',   as: 'about'
   get '/contact', to: 'public_pages#contact', as: 'contact'
   get '/team',    to: 'public_pages#team',    as: 'team'
+
+  resources :service_areas
+  resources :users
 end

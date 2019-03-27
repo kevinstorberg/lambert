@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_27_023634) do
+ActiveRecord::Schema.define(version: 2019_03_27_171336) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "areas_of_service", force: :cascade do |t|
+  create_table "service_areas", force: :cascade do |t|
     t.text "description"
     t.string "headline"
     t.string "title"
@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(version: 2019_03_27_023634) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "sub_areas_of_services", force: :cascade do |t|
-    t.integer "areas_of_service_id"
+  create_table "service_sub_areas", force: :cascade do |t|
+    t.integer "service_area_id"
     t.text "description"
     t.string "headline"
     t.string "title"

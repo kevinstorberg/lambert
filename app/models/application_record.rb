@@ -1,6 +1,10 @@
 class ApplicationRecord < ActiveRecord::Base
   self.abstract_class = true
 
+  def self.attribute_array
+    self.new.attributes.map {|k, v| k.to_sym }.sort
+  end
+
   # ============================================================================
   # Queries ====================================================================
   # ============================================================================

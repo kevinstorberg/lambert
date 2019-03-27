@@ -93,20 +93,20 @@
 }
 
 // =============================================================================
-// Modal =======================================================================
+// Modal/Form Style ============================================================
 // =============================================================================
-.modal-body {
-  background-color: rgba(68,84,95,.8);
+.modal-body, .form-body {
+  background-color: rgba(68, 84, 95, 0.8) !important;
   border: 1px solid white;
   margin: 20px;
   padding-top: 30px;
 }
 
-.modal-button {
+.modal-button, .form-button {
   background-color: white;
   border: 1px solid black;
 }
 
-.modal-content {
-  background-color: rgba(0,23,38,.75);
+.modal-content, .form-content {
+  background-color: rgba(0, 23, 38, 0.75) !important;
 }
