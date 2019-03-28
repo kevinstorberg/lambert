@@ -2,6 +2,7 @@ class ServiceAreasController < ApplicationController
 
   def index
     @service_areas = ServiceArea.all
+    manage_smart_listing(:service_areas)
   end
 
   def new

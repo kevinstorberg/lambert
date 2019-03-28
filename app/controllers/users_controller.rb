@@ -5,6 +5,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    manage_smart_listing(:users)
   end
 
   def show

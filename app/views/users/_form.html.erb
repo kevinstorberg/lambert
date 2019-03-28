@@ -1,0 +1,63 @@
+<%= form_for user do |f| %>
+  <div class="container settings-container">
+    <div class="row settings-row style="padding-top: 20px;">
+      <div class="col-xs-12">
+        <%- if user.errors.any? %>
+          <%- user.errors.full_messages.each do |message| %>
+            <div class="alert alert-danger">
+              <div><%= message %></div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="row settings-row">
+      <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+        <div class="form-group">
+          <%= f.label :first_name %>
+          <%= f.text_field :first_name, class: "form-control" %>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+        <div class="form-group">
+          <%= f.label :last_name %>
+          <%= f.text_field :last_name, class: "form-control" %>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        <div class="form-group">
+          <%= f.label :titles %>
+          <%= f.text_field :titles, class: "form-control" %>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
+        <div class="form-group">
+          <%= f.label :role %>
+          <%= f.select :role, options_for_select(User.role_types.map {|k, v| [v, k] }, user.role), { include_blank: true }, class: "form-control" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="row settings-row">
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <div class="form-group">
+          <%= f.label :email %>
+          <%= f.text_field :email, class: "form-control" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="row settings-row">
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <div class="form-group">
+          <%= f.label :password %>
+          <%= f.text_field :password, class: "form-control" %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

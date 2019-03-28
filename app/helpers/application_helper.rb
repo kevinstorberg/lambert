@@ -1,5 +1,21 @@
 module ApplicationHelper
 
+  def home_path?
+    controller_name == 'users' && action_name == 'show'
+  end
+
+  def profile_path?
+    controller_name == 'users' && action_name == 'edit' && @user == current_user
+  end
+
+  def users_path?
+    controller_name == 'users' && action_name != 'edit' && action_name != 'show'
+  end
+
+  def services_path?
+    controller_name == 'service_areas'
+  end
+
   # ============================================================================
   # Data Formatters ============================================================
   # ============================================================================

@@ -1,0 +1,27 @@
+<%- if smart_listing.collection.any? %>
+  <div class="table-responsive">
+    <table class="table table-condensed#users-listing">
+      <thead>
+        <tr class="background-muted">
+          <th style="width: 150px;"><%= smart_listing.sortable "Full Name", :last_name %></th>
+          <th style="width: 150px;"><%= smart_listing.sortable "Role", :role %></th>
+          <th>Bio</th>
+      <tbody>
+        <%- smart_listing.collection.each do |user| %>
+          <tr>
+            <td><%= link_to user.full_name(:flip), edit_user_path(user) %></td>
+            <td><%= user.role.humanize %></td>
+            <td><%= "At the Law Firm of James R. Lambert you'll get an attorney who will work with you to come up with the best legal strategy. Our attorneys will work hard on your case so you have the best chance of winning." %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+  <%= smart_listing.paginate %>
+  <%= smart_listing.pagination_per_page_links %>
+
+<% else %>
+  <p class="warning">No records!</p>
+
+<% end %>

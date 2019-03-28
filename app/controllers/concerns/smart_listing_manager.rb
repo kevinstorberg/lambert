@@ -5,15 +5,15 @@ module SmartListingManager
   # ============================================================================
   # Lists ======================================================================
   # ============================================================================
-  # def list_roles
-  #   @roles = smart_listing_create(:roles, @roles, partial: "/roles/index",
-  #                                 default_sort: { created_at: "desc" }, page_sizes: [10, 50, 100])
-  # end
+  def list_service_areas
+    @service_areas = smart_listing_create(:service_areas, @service_areas, partial: "/service_areas/index",
+                                          default_sort: { created_at: "desc" }, page_sizes: [10, 50, 100])
+  end
 
-  # def list_users
-  #   @users = smart_listing_create(:users, @users, partial: "/users/index",
-  #                                 default_sort: { last_name: "asc" }, page_sizes: [10, 50, 100])
-  # end
+  def list_users
+    @users = smart_listing_create(:users, @users, partial: "/users/index",
+                                  default_sort: { last_name: "asc" }, page_sizes: [10, 50, 100])
+  end
 
 
   # ============================================================================

@@ -1,0 +1,27 @@
+<%- if smart_listing.collection.any? %>
+  <div class="table-responsive">
+    <table class="table table-condensed#users-listing">
+      <thead>
+        <tr class="background-muted">
+          <th style="width: 150px;"><%= smart_listing.sortable "Title", :last_name %></th>
+          <th style="width: 150px;"><%= smart_listing.sortable "Headline", :role %></th>
+          <th>Description</th>
+      <tbody>
+        <%- smart_listing.collection.each do |service_area| %>
+          <tr>
+            <td><%= link_to service_area.title, edit_service_area_path(service_area) %></td>
+            <td><%= service_area.headline %></td>
+            <td><%= service_area.description %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+  <%= smart_listing.paginate %>
+  <%= smart_listing.pagination_per_page_links %>
+
+<% else %>
+  <p class="warning">No records!</p>
+
+<% end %>
