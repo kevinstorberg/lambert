@@ -33,6 +33,18 @@
           <%= f.text_area :description, class: "form-control" %>
         </div>
       </div>
+    </div>
+
+    <div class="row settings-row">
+      <h5 style="margin-left: 20px;">Sub Areas</h5>
+        <div id="#tasks">
+          <%= f.fields_for :service_sub_areas do |task| %>
+            <%= render '/service_areas/service_sub_area_fields', f: task %>
+          <% end %>
+          <div class="links" style="margin-left: 20px;">
+            <%= link_to_add_association 'New Sub Area', f, :service_sub_areas %>
+          </div>
+        </div>
 
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class="form-group">

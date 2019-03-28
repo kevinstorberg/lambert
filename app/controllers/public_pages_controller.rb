@@ -4,6 +4,7 @@ class PublicPagesController < ApplicationController
   end
 
   def about
+    @service_areas = ServiceArea.all
   end
 
   def team

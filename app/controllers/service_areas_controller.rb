@@ -63,6 +63,7 @@ class ServiceAreasController < ApplicationController
       :id,
       :title,
       service_sub_areas_attributes: [
+        :_destroy,
         :description,
         :headline,
         :id,
