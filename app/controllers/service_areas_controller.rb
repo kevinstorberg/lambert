@@ -1,5 +1,8 @@
 class ServiceAreasController < ApplicationController
 
+  before_action :set_service_area,       only: @crud_actions
+  before_action :authorize_service_area, only: @crud_actions
+
   def index
     @service_areas = ServiceArea.all
     manage_smart_listing(:service_areas)

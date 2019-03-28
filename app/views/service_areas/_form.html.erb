@@ -1,0 +1,45 @@
+<%= form_for service_area do |f| %>
+  <div class="container settings-container">
+    <div class="row settings-row style="padding-top: 20px;">
+      <div class="col-xs-12">
+        <%- if service_area.errors.any? %>
+          <%- service_area.errors.full_messages.each do |message| %>
+            <div class="alert alert-danger">
+              <div><%= message %></div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="row settings-row">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="form-group">
+          <%= f.label :title %>
+          <%= f.text_field :title, class: "form-control" %>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="form-group">
+          <%= f.label :headline %>
+          <%= f.text_field :headline, class: "form-control" %>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="form-group">
+          <%= f.label :description %>
+          <%= f.text_area :description, class: "form-control" %>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="form-group">
+          <%= f.submit "Save", class: "btn content-btn dashboard-button dashboard-button-right", style: "border: 1px solid black;" %>
+          <%= link_to "Back", service_areas_path, class: "btn content-btn dashboard-button", style: "border: 1px solid black;" %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

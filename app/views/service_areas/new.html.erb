@@ -3,9 +3,8 @@
   <div class="col-xs-8 col-sm-8 col-md-10 col-lg-10 col-xl-10">
     <div id="services-index-container" class="dashboard-container">
       <% if current_user.present? && current_user.any_admin? %>
-        <%= link_to "New Service", new_service_area_path, class: "btn content-button dashboard-button dashboard-button-right" %>
-        <h3>Services</h3>
-        <%= smart_listing_render(:service_areas) %>
+        <h3>Services / New</h3>
+        <%= render partial: "/service_areas/form", locals: { service_area: @service_area } %>
       <% end %>
     </div>
   </div>

@@ -138,6 +138,21 @@
    outline: none;
 }
 
+.dashboard-button {
+  background-color: rgba(0, 23, 38, 0.75);
+  color: white;
+}
+
+.dashboard-button:hover {
+  color: white;
+  border: 2px solid gold !important;
+}
+
+.dashboard-button-right {
+  position: absolute;
+  right: 20px;
+}
+
 // =============================================================================
 // Flash Messages ==============================================================
 // =============================================================================

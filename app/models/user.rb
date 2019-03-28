@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :recoverable,
          :registerable, :rememberable, :validatable
 
-  validates_presence_of :email, :first_name, :last_name
+  validates_presence_of :email, :first_name, :last_name, :role
 
   scope :team, -> { where(role: ["admin", "super_admin"]) }
 
