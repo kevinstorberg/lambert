@@ -27,4 +27,13 @@ class UserPolicy < ApplicationPolicy
   def destroy?
     user.any_admin?
   end
+
+  # ============================================================================
+  def edit_password?
+    user.any_admin? || user == record
+  end
+
+  def update_password?
+    edit_password?
+  end
 end

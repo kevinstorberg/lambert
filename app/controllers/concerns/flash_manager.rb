@@ -38,6 +38,20 @@ module FlashManager
     }
   end
 
+  def flash_update_password_fail
+    {
+      text: "Failed to update password! Please make sure your password is valid.",
+      type: "alert"
+    }
+  end
+
+  def flash_update_password_success
+    {
+      text: "Password successfully updated.",
+      type: "alert"
+    }
+  end
+
   # CRUD =======================================================================
   def flash_alert
     {

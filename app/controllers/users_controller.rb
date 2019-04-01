@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
-  before_action :set_user,       only: @@crud_actions
-  before_action :authorize_user, only: @@crud_actions
+  before_action :set_user,       only: @crud_actions
+  before_action :authorize_user, only: @crud_actions
 
   def index
     @users = User.all
@@ -49,6 +49,23 @@ class UsersController < ApplicationController
     redirect_back fallback_location: root_url
   end
 
+  # ============================================================================
+  def edit_password
+    @user = User.find(params[:user_id])
+    render 'edit_password.js'
+  end
+
+  def update_password
+    @user = User.find(params[:user_id])
+    if user_params[:password] == user_params[:password_confirmation] && @user.update_attributes(password: user_params[:password])
+      sign_in(@user, :bypass => true) if @user.id == current_user.id
+      flash_message('update_password_success')
+    else
+      flash_message('update_password_fail')
+    end
+    return render js: "window.location = '#{request.referrer}';"
+  end
+
   private
 
   def authorize_user
@@ -66,6 +83,8 @@ class UsersController < ApplicationController
       :first_name,
       :id,
       :last_name,
+      :password,
+      :password_confirmation,
       :remember_created_at,
       :reset_password_sent_at,
       :reset_password_token,

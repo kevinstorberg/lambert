@@ -52,10 +52,16 @@
     </div>
 
     <div class="row settings-row">
-      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-12">
         <div class="form-group">
-          <%= f.label :password %>
-          <%= f.text_field :password, class: "form-control" %>
+          <% if user.persisted? %>
+            <%= link_to "Destroy", user_path(user), method: :delete, data: { confirm: "Are you sure you want to delete this User?" },
+            class: "btn content-btn dashboard-button-danger pull-right", style: "border: 1px solid black; margin-right: 5px;" %>
+          <% end %>
+
+          <%= f.submit "Save", class: "btn-sm content-button dashboard-button" %>
+          <%= link_to "Change Password", user_edit_password_path(@user, id: user.id), remote: true,
+          class: "btn content-btn dashboard-button", style: "border: 1px solid black; margin-bottom: 4px; padding: 4px;" %>
         </div>
       </div>
     </div>
