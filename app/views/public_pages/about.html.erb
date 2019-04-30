@@ -18,25 +18,20 @@
 </div>
 <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <ul class="nav nav-tabs">
-      <% if @service_areas.present? %>
-        <% @service_areas.each do |service_area| %>
-          <% if service_area.service_sub_areas.count < 2 %>
-            <li class="nav-item">
-              <a class="nav-link active" href="#"><%= service_area.title %></a>
-            </li>
-          <% else %>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><%= service_area.title %></a>
-              <div class="dropdown-menu">
-                <% service_area.service_sub_areas.each do |service_sub_area| %>
-                  <a class="dropdown-item" href="#"><%= service_sub_area.title %></a>
-                <% end %>
-              </div>
-            </li>
-          <% end %>
-        <% end %>
-      <% end %>
-    </ul>
+      <ul class='nav'>
+        <li class='active'>Home</li>
+        <li>
+          <div class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Personal asset loans</a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+              <li><a href="#">asds</a></li>
+              <li class="divider"></li>
+            </ul>
+          </div>
+        </li>
+        <li>Payday loans</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
   </div>
 </div>
