@@ -15,7 +15,8 @@ gem 'rails', '~> 5.2.2' # Bundle edge Rails instead: gem 'rails', github: 'rails
 # Languages/Interpreters/Compilers/Compressors =================================
 # ==============================================================================
 gem 'coffee-rails', '~> 4.2' # CoffeeScript adapter for the Rails asset pipeline
-gem 'sass-rails', '~> 5.0' # Ruby on Rails stylesheet engine for Sass
+gem 'sass-rails', '~> 5.0.7' # Ruby on Rails stylesheet engine for Sass
+gem 'sassc-rails', '>= 2.0.0' # integrate SassC-Ruby with Rails
 gem 'uglifier', '>= 1.3.0' # Ruby wrapper for UglifyJS JavaScript compressor
 
 # ==============================================================================
@@ -38,10 +39,8 @@ gem "pundit", "~> 2.0.0" # minimal authorization through OO design and pure Ruby
 
 # ==============================================================================
 # Assets =======================================================================
-# ==============================================================================
+# ==============================================================================r
 gem 'bootstrap', '~> 4.3.1'
-gem "bootstrap-sass", ">= 3.4.1" # official Sass port of Bootstrap 2 and 3
-gem 'bootstrap-select-rails' # assets for bootstrap-select
 gem "font-awesome-rails", "~> 4.7.0.4" # font-awesome for asset pipeline
 gem "jquery-rails", "~> 4.3.3" # automate using jQuery with Rails
 gem "jquery-ui-rails", "~> 6.0.1" # jQuery UI for the Rails asset pipeline

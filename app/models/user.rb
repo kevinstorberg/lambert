@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  include RailsSettings::Extend
+  # include RailsSettings::Extend
 
   devise :database_authenticatable, :recoverable,
          :registerable, :rememberable, :validatable
