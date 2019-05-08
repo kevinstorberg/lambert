@@ -1,41 +1,4 @@
 // =============================================================================
-// Footer Styles ===============================================================
-// =============================================================================
-#footer-container {
-  background: none !important;
-  height: 50px;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  #footer-info-container {
-    .footer {
-      padding-top: 14px;
-      text-align: center;
-      .footer-item {
-        display: inline-block;
-        list-style: none;
-        .footer-link {
-          color: #707070;
-          font-size: 14px;
-          opacity: .8;
-        }
-        .footer-link:hover {
-          color: #384853;
-          opacity: 1;
-        }
-      }
-      .footer-break {
-        color: #384853;
-        font-size: 16px;
-        margin: -8px 5px 0px 5px;
-      }
-    }
-  }
-}
-
-// =============================================================================
 // Dashboard ===================================================================
 // =============================================================================
 .dashboard-container {

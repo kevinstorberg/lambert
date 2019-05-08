@@ -8,7 +8,7 @@
 @import 'font-awesome';
 
 @import 'public_pages/*';
-@import 'shared/*';
+@import 'layouts/*';
 
 html {
   padding: 0;
@@ -17,8 +17,6 @@ html {
 }
 
 body {
-  // background-image: image-url("background.jpg");
-  // background-color: #7a212e;
   min-height: 100%;
   padding: 0;
   width: 100%;

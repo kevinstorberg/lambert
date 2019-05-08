@@ -15,4 +15,10 @@ module NavHelper
       return false
     end
   end
+
+  def include_footer?
+    return false if controller_name == 'service_areas' && ['new', 'edit'].include?(action_name)
+    return false if controller_name == 'public_pages'  && action_name == 'home'
+    return true
+  end
 end

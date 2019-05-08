@@ -13,26 +13,30 @@
   </head>
 
   <body>
+    <div id="main-container">
+      <div id="wrapper">
 
-    <%= render partial: '/layouts/navbar' %>
+        <%= render partial: '/layouts/navbar' %>
 
-    <%- flash.each do |name, msg| %>
-      <div class="alert side-margin <%= "alert-success" %>">
-        <button class="close" type="button" data-dismiss="alert" aria-hidden="true" &times;></button>
-        <%= raw(msg) %>
+        <%- flash.each do |name, msg| %>
+          <div class="alert side-margin <%= "alert-success" %>">
+            <button class="close" type="button" data-dismiss="alert" aria-hidden="true" &times;></button>
+            <%= raw(msg) %>
+          </div>
+        <% end %>
+
+        <%= render partial: '/layouts/modal' %>
+
+        <div class="container-fluid side-padding" style="min-height: 100%;">
+          <%= yield %>
+        </div>
+
+        <% if include_footer? %>
+          <%= render partial: '/layouts/footer' %>
+        <% end %>
+
       </div>
-    <% end %>
-
-    <%= render partial: '/layouts/modal' %>
-
-    <div class="container-fluid side-padding">
-      <%= yield %>
     </div>
-
-    <% unless controller_name == 'service_areas' && ['new', 'edit'].include?(action_name) || true %>
-      <%= render partial: '/layouts/footer' %>
-    <% end %>
-
   </body>
 </html>
 
