@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   # include RailsSettings::Extend
 
+  has_one_attached :avatar
+
   devise :database_authenticatable, :recoverable,
          :registerable, :rememberable, :validatable
 
