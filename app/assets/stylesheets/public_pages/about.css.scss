@@ -1,0 +1,44 @@
+.about-tab-pane-border {
+  border-color: #dee2e6 !important;
+}
+
+#serviceAreaTab {
+  background: #023c5b;
+  border-bottom: 1px solid #023c5b;
+  border-right: 5px solid #5c8096;
+  border-top: 5px solid #5c8096;
+  position: relative;
+  width: 100%;
+
+  .left-nav-link {
+    border-left: 5px solid #5c8096 !important;
+  }
+
+  .left-nav-link.active {
+    border-left: 5px solid #aa717a !important;
+  }
+
+  .nav-link {
+    background-color: #023c5b;
+    border: 0px;
+    border-radius: 0;
+    border-top: 5px solid #5c8096;
+    color: white !important;
+    margin-top: -5px;
+    text-transform: uppercase;
+  }
+
+  .nav-link.active {
+    background: #7a212e;
+    border-top: 5px solid #aa717a;
+  }
+}
+
+.tab-pane {
+  border: 1px solid black;
+  border-top: 0px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  min-height: 300px;
+  width: 100% !important;
+}

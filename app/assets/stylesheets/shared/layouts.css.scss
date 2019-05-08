@@ -1,71 +1,4 @@
 // =============================================================================
-// NavBar Styles ===============================================================
-// =============================================================================
-.navbar {
-  background: none !important;
-  border-bottom: 1px solid black;
-  box-shadow: 0px 2px silver;
-  margin-bottom: 20px;
-
-  #navbar-brand {
-    line-height: 20px;
-    text-align: center;
-    a {
-      color: black;
-      text-decoration: none;
-    }
-  }
-
-  #navbar-brand:hover {
-    cursor: pointer;
-  }
-
-  .navbar-nav {
-    margin-top: 10px;
-    text-align: center;
-    .nav-item {
-      list-style: none;
-      .nav-link {
-        color: black !important;
-        font-size: 18px;
-        opacity: .8;
-      }
-      .nav-link:hover {
-        color: #384853;
-        cursor: pointer;
-        text-decoration: underline;
-      }
-    }
-    .nav-break {
-      color: #384853;
-      font-size: 20px;
-      margin: 6px 10px 20px 10px;
-    }
-  }
-}
-@media (max-width: 990px) {
-  .navbar {
-    .navbar-nav {
-      border-radius: 3px;
-      padding: 10px;
-    }
-    .nav-break {
-      display: none;
-    }
-  }
-}
-
-.navbar-collapse {
-  position: absolute;
-  right: 20px;
-
-  @media (max-width: 990px) {
-    position: static;
-    right: 0;
-  }
-}
-
-// =============================================================================
 // Footer Styles ===============================================================
 // =============================================================================
 #footer-container {
@@ -107,37 +40,6 @@
 // =============================================================================
 .dashboard-container {
   width: 100%;
-}
-
-// =============================================================================
-// Modal/Form Style ============================================================
-// =============================================================================
-.modal-body, .form-body, .content-body {
-  background-color: rgba(68, 84, 95, 0.8) !important;
-  border: 1px solid white;
-  border-radius: 4px;
-  height: 100%;
-  margin: 20px;
-  padding-top: 30px;
-}
-
-.modal-button, .form-button, .content-button {
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 4px;
-}
-
-.modal-content, .form-content, .content-wrapper {
-  background-color: rgba(0, 23, 38, 0.75) !important;
-  border-radius: 4px;
-  height: 100%;
-}
-
-.content-shadow {
-  background-color: rgba(0, 0, 0, 0.6) !important;
-  border-radius: 4px;
-  margin: 0;
-  padding: 0;
 }
 
 .btn-active {

@@ -24,9 +24,22 @@ body {
   width: 100%;
 }
 
+.basic-font {
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.fancy-font {
+  font-family: 'Frank Ruhl Libre';
+}
+
 .form-group.required .control-label:after {
   content: "*";
   color: red;
+}
+
+.simple-link {
+  cursor: pointer !important;
+  text-decoration: none !important;
 }
 
 .side-margin {

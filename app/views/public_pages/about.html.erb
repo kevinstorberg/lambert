@@ -1,9 +1,9 @@
-<h4>| About</h4>
+<h4 class="fancy-font">| About</h4>
 
 </br>
 
 <div class="row">
-  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <div class="basic-font col side-padding">
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
       Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.
@@ -17,14 +17,31 @@
   </div>
 </div>
 
-<ul class="nav nav-tabs">
-  <li role="presentation" class="active"><a href="#">Home</a></li>
-  <li role="presentation" class="active dropdown">
-    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-      Dropdown <span class="caret"></span>
-    </a>
-    <ul class="dropdown-menu">
-      Menu
-    </ul>
-  </li>
-</ul>
+<% if @service_areas.any? %>
+  <div class="row">
+    <div class="col">
+
+      <ul class="fancy-font nav nav-tabs" id="serviceAreaTab" role="tablist">
+        <% @service_areas.each_with_index do |service_area, index| %>
+          <li class="about-tab-pane-border nav-item">
+            <a class="nav-link simple-link <%= 'active left-nav-link' if index == 0 %>" id="service-area-<%= service_area.id %>-tab" data-toggle="tab" href="#service-area-<%= service_area.id %>-pane" role="tab" aria-controls="service-area-<%= service_area.id %>-pane" aria-selected="true">
+              <%= service_area.title %>
+            </a>
+          </li>
+        <% end %>
+      </ul>
+
+      <div class="tab-content" id="serviceAreaContent">
+        <% @service_areas.each_with_index do |service_area, index| %>
+          <div class="about-tab-pane-border basic-font tab-pane fade show <%= 'active' if index == 0 %>" id="service-area-<%= service_area.id %>-pane" role="tabpanel" aria-labelledby="service-area-<%= service_area.id %>-tab">
+            <div style="padding: 15px;">
+              <h5><%= service_area.headline %></h5>
+              <p><%= service_area.description %></p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+
+    </div>
+  </div>
+<% end %>

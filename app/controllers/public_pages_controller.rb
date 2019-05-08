@@ -4,7 +4,7 @@ class PublicPagesController < ApplicationController
   end
 
   def about
-    @service_areas = ServiceArea.all
+    @service_areas = ServiceArea.all.order(title: :asc)
   end
 
   def team
@@ -12,6 +12,7 @@ class PublicPagesController < ApplicationController
   end
 
   def contact
+    instantiate_params(:remove_backdrop)
     render 'contact.js'
   end
 end

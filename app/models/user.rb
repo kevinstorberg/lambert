@@ -13,7 +13,7 @@ class User < ApplicationRecord
   end
 
   def full_name_with_titles
-    "#{full_name} | #{titles}"
+    "#{full_name}, #{titles}"
   end
 
   # ============================================================================

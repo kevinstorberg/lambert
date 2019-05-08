@@ -1,49 +1,16 @@
-<div id="home-page" class="wrapper">
-  <div id="home-page-container" class="container-fluid">
-    <div class="home-page-row row" style="margin-bottom: 20px;">
-
-      <div class="col-sm-12 home-page-boxes" id="carousel-container">
-        <div id="home" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <%= image_tag "attorny_cares.jpg", class: "d-block w-100" %>
-              <div class="carousel-caption d-md-block">
-                <h5>Get an attorney who cares</h5>
-                <p>You'll get an attorney who gives your</p>
-                <p>case individual attention when you come</p>
-                <p>to the Law Firm of James R. Lambert.</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <%= image_tag "domestic.jpg", class: "d-block w-100" %>
-              <div class="carousel-caption d-md-block">
-                <h5>You need caring representation</h5>
-                <p>Your divorce is a difficult time,</p>
-                <p>make sure you get an attorney</p>
-                <p>who cares about your case.</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <%= image_tag "injured.jpg", class: "d-block w-100" %>
-              <div class="carousel-caption d-md-block">
-                <h5>Injured at work?</h5>
-                <p>You need a lawyer on your side,</p>
-                <p>to help you recover losses from</p>
-                <p>medical bills and lost wages.</p>
-              </div>
-            </div>
-          </div>
-          <a class="carousel-control-prev" href="#home" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#home" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-      </div>
-
-    </div>
+<div id="jumbotron">
+  <div class="video-container">
+    <%= video_tag "nyc_train_compressed.mp4", autoplay: true, loop: true, muted: true, id: "homeVideo", class: "img-thumbnail", style: "opacity: 0.5;" %>
   </div>
 </div>
+
+
+<script>
+  $(document).ready(function() {
+
+    $.get("/contact", {
+      remove_backdrop: true
+    });
+
+  });
+</script>

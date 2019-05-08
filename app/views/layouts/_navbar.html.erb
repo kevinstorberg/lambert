@@ -1,7 +1,9 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="fancy-font navbar navbar-expand-lg navbar-light bg-light">
   <div class="navbar-brand" id="navbar-brand" href="/">
-    <a href="/" class="nav-title" style="font-size: 16px;">The Law Firm of</a><br>
-    <a href="/" class="nav-title">James R Lambert</a><br>
+    <a href="/" class="nav-title" style="font-size: 20px; line-height: 25px;">The Law Firm of</a><br>
+    <a href="/" class="nav-title" style="display: inline-block; font-size: 30px;">James</a>
+    <a href="/" class="nav-title" style="display: inline-block; font-size: 29px;">R</a>
+    <a href="/" class="nav-title" style="display: inline-block; font-size: 30px;">Lambert</a>
   </div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,23 +13,28 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <%= link_to "Home", root_url, class: "nav-link" %>
+        <%= link_to "Home", root_url, class: (active_nav?('home') ? "active-nav-link nav-link" : "nav-link") %>
       </li>
 
       <li class="nav-item nav-break">|</li>
       <li class="nav-item">
-        <%= link_to "About", about_path, class: "nav-link" %>
+        <%= link_to "About", about_path, class: (active_nav?('about') ? "active-nav-link nav-link" : "nav-link") %>
       </li>
 
       <li class="nav-item nav-break">|</li>
       <li class="nav-item">
-        <%= link_to "Team", team_path, class: "nav-link" %>
+        <%= link_to "Team", team_path, class: (active_nav?('team') ? "active-nav-link nav-link" : "nav-link") %>
       </li>
 
       <li class="nav-item nav-break">|</li>
       <li class="nav-item">
-        <%= link_to "Contact", contact_path, remote: true, class: "nav-link" %>
+        <%= link_to "Contact", contact_path, remote: true, class: "nav-link", id: "contact-link" %>
       </li>
+
+      <!-- <li class="nav-item nav-break">|</li>
+      <li class="nav-item">
+        <a href="tel:17189835050" class="nav-link">1.718.983.5050</a>
+      </li> -->
 
       <%- if current_user.present? %>
         <li class="nav-item nav-break">|</li>
@@ -37,7 +44,7 @@
       <% else %>
         <li class="nav-item nav-break">|</li>
         <li class="nav-item">
-          <%= link_to 'Sign In', new_user_session_path, class: "nav-link" %>
+          <%= link_to 'Sign In', new_user_session_path, class: (active_nav?('signin') ? "active-nav-link nav-link" : "nav-link") %>
         </li>
       <% end %>
     </ul>

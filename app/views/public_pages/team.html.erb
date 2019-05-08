@@ -1,4 +1,4 @@
-<h4>| Our Team</h4>
+<h4 class="fancy-font">| Our Team</h4>
 
 </br>
 
@@ -7,18 +7,23 @@
     <%- @team.each_with_index do |member, index| %>
       <div class="row">
 
-        <div class="col-xs-12">
+        <div class="col">
+          <%= image_tag "horse_teeth.jpg", class: "img-thumbnail mr-3 small-screen-thumbnail", style: "width: 100%;" %>
           <div class="media team-member">
             <div class="team-image-container">
-              <%= image_tag "horse_teeth.jpg", class: "mr-3" %>
-              <h5><%= member.full_name %></h5>
+              <%= image_tag "horse_teeth.jpg", class: "img-thumbnail mr-3" %>
             </div>
-            <div class="media-body">
-              <h4 class="mt-0"><%= member.full_name_with_titles %></h4>
 
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
-              Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-              Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+            <br>
+
+            <div class="media-body">
+              <h4 class="mt-0 fancy-font"><%= member.full_name_with_titles %></h4>
+
+              <p class="basic-font">
+                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+                Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+              </p>
 
               <div class="accordion bio-accordion" id="bio-accordion-<%= index %>">
                 <div class="card bio-card">
@@ -31,7 +36,7 @@
                   </div>
 
                   <div id="bio-collapse-<%= index %>" class="collapse" aria-labelledby="bio-heading-<%= index %>" data-parent="#bio-accordion-<%= index %>">
-                    <div class="card-body">
+                    <div class="basic-font card-body">
                       Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
                       non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
                       sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,

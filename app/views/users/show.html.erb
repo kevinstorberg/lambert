@@ -1,6 +1,6 @@
 <div class="row">
   <%= render partial: '/layouts/sidebar', locals: {  } %>
-  <div class="col-xs-8">
+  <div class="col-xs-9">
     <div id="users-show-container" class="container dashboard-container">
       <% if current_user.present? && current_user.any_admin? %>
         <h3>Welcome <%= current_user.first_name %></h3>

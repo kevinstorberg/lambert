@@ -1,3 +1,17 @@
+.bio-card {
+  border: none;
+  color: black;
+}
+
+.bio-heading {
+  border: none;
+  background-color: white;
+}
+
+.small-screen-thumbnail {
+  display: none;
+}
+
 #team-bio-container {
   padding: 20px;
   // background-color: #f7f7f7;
@@ -11,6 +25,7 @@
 }
 
 .team-image-container {
+  display: block;
   text-align: center;
   h5 {
     background-color: #dcdac4;
@@ -20,12 +35,13 @@
   }
 }
 
-.bio-card {
-  border: none;
-  color: black;
-}
 
-.bio-heading {
-  border: none;
-  background-color: white;
+@media (max-width: 767px) {
+  .small-screen-thumbnail {
+    display: block;
+  }
+
+  .team-image-container {
+    display: none;
+  }
 }
