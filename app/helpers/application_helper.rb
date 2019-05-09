@@ -104,9 +104,9 @@ module ApplicationHelper
   def find_image(object)
     case object.class.name
     when 'User'
-      object.avatar.present? ? object.avatar : "horse_teeth.jpeg"
+      return object.avatar.present? ? object.avatar : "horse_teeth.jpeg"
     else
-      "horse_teeth.jpeg"
+      return "horse_teeth.jpeg"
     end
   end
 
