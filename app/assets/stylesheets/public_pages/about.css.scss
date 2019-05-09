@@ -42,3 +42,28 @@
   min-height: 300px;
   width: 100% !important;
 }
+
+
+@media (max-width: 450px) {
+  #serviceAreaTab {
+    border-right: none;
+
+    .left-nav-link {
+      border-top: 5px solid #5c8096 !important;
+    }
+
+    .left-nav-link.active {
+      border-top: 5px solid #aa717a !important;
+    }
+
+    .nav-link {
+      border-left: 5px solid #5c8096 !important;
+      border-right: 5px solid #5c8096 !important;
+    }
+
+    .nav-link.active {
+      border-left: 5px solid #aa717a !important;
+      border-right: 5px solid #aa717a !important;
+    }
+  }
+}

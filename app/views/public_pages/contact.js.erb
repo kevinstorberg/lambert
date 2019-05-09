@@ -1,4 +1,5 @@
 $(".modal-body").html("<%= escape_javascript(render partial: '/public_pages/contact', locals: {  }) %>");
+$(".navbar-collapse").collapse('hide');
 $("#lambertModal").modal("show");
 
 <% if @remove_backdrop %>

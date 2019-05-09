@@ -31,7 +31,7 @@
           <%= yield %>
         </div>
 
-        <% if include_footer? %>
+        <% if include_footer? || true %>
           <%= render partial: '/layouts/footer' %>
         <% end %>
 
@@ -42,4 +42,8 @@
 
 <script>
   slideUpMessages();
+
+  $(".navbar-toggler").click(function() {
+    $("#lambertModal").modal("hide");
+  });
 </script>

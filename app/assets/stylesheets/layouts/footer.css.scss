@@ -29,7 +29,36 @@
   opacity: 1;
 }
 
+.footer-link-large {
+  display: block;
+}
+
+.footer-link-small {
+  display: none;
+}
+
 .footer-nav {
   margin: 0;
   padding: 0;
+}
+
+
+@media (max-width: 768px) {
+  .footer-link-large {
+    display: none;
+  }
+
+  .footer-link-small {
+    display: block;
+  }
+}
+
+@media (max-width: 320px) {
+  .footer-link-large {
+    display: none;
+  }
+
+  .footer-link-tiny {
+    display: block;
+  }
 }
