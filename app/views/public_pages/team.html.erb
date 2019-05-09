@@ -8,10 +8,20 @@
       <div class="row">
 
         <div class="col">
-          <%= image_tag find_image(member), class: "img-thumbnail mr-3 small-screen-thumbnail", style: "width: 100%;" %>
+
+          <% if member.avatar.attached? %>
+            <%= image_tag member.avatar, fallback: "horse_teeth.jpeg", class: "img-thumbnail mr-3 small-screen-thumbnail", style: "width: 100%;" %>
+          <% else %>
+            <%= image_tag "horse_teeth.jpeg", class: "img-thumbnail mr-3 small-screen-thumbnail", style: "width: 100%;" %>
+          <% end %>
+
           <div class="media team-member">
             <div class="team-image-container">
-              <%= image_tag find_image(member), class: "img-thumbnail mr-3", style: "height: 300px; max-width: 300px;" %>
+              <% if member.avatar.attached? %>
+                <%= image_tag member.avatar, fallback: "horse_teeth.jpeg", class: "img-thumbnail mr-3", style: "height: 300px; max-width: 300px;" %>
+              <% else %>
+                <%= image_tag "horse_teeth.jpeg", class: "img-thumbnail mr-3", style: "height: 300px; max-width: 300px;" %>
+              <% end %>
             </div>
 
             <br>

@@ -100,16 +100,7 @@ module ApplicationHelper
   def enum_select(enums, sort = true)
   	sort ? enums.map {|k, v| [k.humanize, k] }.sort : enums.map {|k, v| [k.humanize, k] }
   end
-
-  def find_image(object)
-    case object.class.name
-    when 'User'
-      return object.avatar.present? && object.avatar.attachment.present? ? object.avatar : "horse_teeth.jpeg"
-    else
-      return "horse_teeth.jpeg"
-    end
-  end
-
+  
   # ============================================================================
   # Wrappers ===================================================================
   # ============================================================================
