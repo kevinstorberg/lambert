@@ -101,6 +101,15 @@ module ApplicationHelper
   	sort ? enums.map {|k, v| [k.humanize, k] }.sort : enums.map {|k, v| [k.humanize, k] }
   end
 
+  def find_image(object)
+    case object.class.name
+    when 'User'
+      object.avatar.present? ? object.avatar : "horse_teeth.jpeg"
+    else
+      "horse_teeth.jpeg"
+    end
+  end
+
   # ============================================================================
   # Wrappers ===================================================================
   # ============================================================================

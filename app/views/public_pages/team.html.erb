@@ -8,10 +8,10 @@
       <div class="row">
 
         <div class="col">
-          <%= image_tag member.avatar, class: "img-thumbnail mr-3 small-screen-thumbnail", style: "width: 100%;" %>
+          <%= image_tag find_image(member), class: "img-thumbnail mr-3 small-screen-thumbnail", style: "width: 100%;" %>
           <div class="media team-member">
             <div class="team-image-container">
-              <%= image_tag member.avatar, class: "img-thumbnail mr-3", style: "height: 300px; max-width: 300px;" %>
+              <%= image_tag find_image(member), class: "img-thumbnail mr-3", style: "height: 300px; max-width: 300px;" %>
             </div>
 
             <br>

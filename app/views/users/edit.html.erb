@@ -3,7 +3,7 @@
   <div class="col-9">
     <div id="users-show-container" class="dashboard-container">
       <% if current_user.present? && current_user.any_admin? %>
-      <%= image_tag @user.avatar, class: "img-thumbnail mr-3", style: "height: 50px; margin-bottom: 10px; margin-left: 14px; max-width: 50px;" %>
+      <%= image_tag find_image(@user), class: "img-thumbnail mr-3", style: "height: 50px; margin-bottom: 10px; margin-left: 14px; max-width: 50px;" %>
         <h3 style="display: inline-block;"><%= "Profile of #{@user.full_name}" %></h3>
         <%= render partial: "/users/form", locals: { user: @user } %>
       <% end %>
