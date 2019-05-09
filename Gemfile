@@ -78,7 +78,7 @@ gem "smart_listing" # data listing gem with built-in sorting, filtering and in-p
 # ==============================================================================
 # APIs & Integratons ===========================================================
 # ==============================================================================
-gem "aws-sdk-mturk", "~> 1.6.0" # integrates the AWS Mturk
+# gem "aws-sdk-mturk", "~> 1.6.0" # integrates the AWS Mturk
 gem "aws-sdk-s3", require: false # integrates the AWS S3 bucket
 # gem 'intercom', '~> 3.7.2' # Ruby bindings for the Intercom API
 # gem "intercom-rails", "~> 0.4.0" # customer relationship management/messaging

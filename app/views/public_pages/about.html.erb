@@ -21,7 +21,7 @@
   <div class="row" style="margin-bottom: 60px;">
     <div class="col">
 
-      <ul class="fancy-font nav nav-tabs nav-fill" id="serviceAreaTab" role="tablist">
+      <ul class="fancy-font nav nav-tabs" id="serviceAreaTab" role="tablist">
         <% @service_areas.each_with_index do |service_area, index| %>
           <li class="about-tab-pane-border nav-item">
             <a class="nav-link simple-link <%= 'active left-nav-link' if index == 0 %>" id="service-area-<%= service_area.id %>-tab" data-toggle="tab" href="#service-area-<%= service_area.id %>-pane" role="tab" aria-controls="service-area-<%= service_area.id %>-pane" aria-selected="true">
@@ -45,3 +45,17 @@
     </div>
   </div>
 <% end %>
+
+<script>
+  $(document).ready(function() {
+    (function($) {
+    var $window = $(window),
+        $html = $('html');
+
+    $window.resize(function resize(){
+        if ($window.width() < 514) { return $html.addClass('nav-fill'); }
+          $html.removeClass('nav-fill');
+      }).trigger('resize');
+    })(jQuery);
+  });
+</script>
