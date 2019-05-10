@@ -6,54 +6,53 @@
   <%- if @team.any? %>
     <%- @team.each_with_index do |member, index| %>
       <div class="row">
-
         <div class="col">
 
-          <% if member.avatar.attached? %>
-            <%= image_tag member.avatar, class: "img-thumbnail mr-3 small-screen-thumbnail", style: "width: 100%;" %>
-          <% end %>
+          <div class="team-member">
+            <% if member.avatar.attached? %>
+              <%= image_tag member.avatar, class: "img-thumbnail mr-3 small-screen-thumbnail", style: "width: 100%;" %>
+            <% end %>
 
-          <div class="media team-member">
-            <div class="team-image-container">
-              <% if member.avatar.attached? %>
-                <%= image_tag member.avatar, class: "img-thumbnail mr-3", style: "height: 300px; max-width: 300px;" %>
-              <% end %>
-            </div>
+            <div class="media">
+              <div class="team-image-container">
+                <% if member.avatar.attached? %>
+                  <%= image_tag member.avatar, class: "img-thumbnail mr-3", style: "height: 300px; max-width: 300px;" %>
+                <% end %>
+              </div>
 
-            <br>
+              <br>
 
-            <div class="media-body">
-              <h4 class="mt-0 fancy-font"><%= member.full_name_with_titles %></h4>
+              <div class="media-body">
+                <h4 class="mt-0 fancy-font"><%= member.full_name_with_titles %></h4>
 
-              <p class="basic-font">
-                <%= member.short_bio %>
-              </p>
+                <p class="basic-font">
+                  <%= member.short_bio %>
+                </p>
 
-              <% if member.long_bio.present? %>
-                <div class="accordion bio-accordion" id="bio-accordion-<%= index %>">
-                  <div class="card bio-card">
-                    <div class="card-header bio-heading" id="bio-heading-<%= index %>">
-                      <h2 class="mb-0">
-                        <button class="btn" type="button" data-toggle="collapse" data-target="#bio-collapse-<%= index %>" aria-expanded="true" aria-controls="bio-collapse-<%= index %>">
-                          See More. . .
-                        </button>
-                      </h2>
-                    </div>
+                <% if member.long_bio.present? %>
+                  <div class="accordion bio-accordion" id="bio-accordion-<%= index %>">
+                    <div class="card bio-card">
+                      <div class="card-header bio-heading" id="bio-heading-<%= index %>">
+                        <h2 class="mb-0">
+                          <button class="btn" type="button" data-toggle="collapse" data-target="#bio-collapse-<%= index %>" aria-expanded="true" aria-controls="bio-collapse-<%= index %>">
+                            See More. . .
+                          </button>
+                        </h2>
+                      </div>
 
-                    <div id="bio-collapse-<%= index %>" class="collapse" aria-labelledby="bio-heading-<%= index %>" data-parent="#bio-accordion-<%= index %>">
-                      <div class="basic-font card-body">
-                        <%= member.long_bio %>
+                      <div id="bio-collapse-<%= index %>" class="collapse" aria-labelledby="bio-heading-<%= index %>" data-parent="#bio-accordion-<%= index %>">
+                        <div class="basic-font card-body">
+                          <%= member.long_bio %>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              <% end %>
-
-
+                <% end %>
+              </div>
             </div>
           </div>
-        </div>
 
+        </div>
       </div>
     <% end %>
   <% end%>

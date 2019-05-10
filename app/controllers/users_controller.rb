@@ -16,7 +16,7 @@ class UsersController < ApplicationController
 
   def create
     @user.assign_attributes(user_params)
-    if @user.save
+    if @user.save!
       flash_message('success')
     else
       flash_message('alert')

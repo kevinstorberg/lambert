@@ -58,6 +58,25 @@
       </div>
     </div>
 
+    <% if user.new_record? %>
+
+      <div class="row settings-row">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+          <div class="form-group">
+            <%= f.label :password, style: "color: white;" %>
+            <%= f.text_field :password, class: "form-control" %>
+          </div>
+        </div>
+
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+          <div class="form-group">
+            <%= f.label :password_confirmation, style: "color: white;" %>
+            <%= f.text_field :password_confirmation, class: "form-control" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
     <div class="row settings-row">
       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
         <div class="form-group">
@@ -83,8 +102,11 @@
           <% end %>
 
           <%= f.submit "Save", class: "btn-sm content-button dashboard-button" %>
-          <%= link_to "Change Password", user_edit_password_path(@user, id: user.id), remote: true,
-          class: "btn content-btn dashboard-button", style: "border: 1px solid black; margin-bottom: 4px; padding: 4px;" %>
+
+          <% if @user.persisted? %>
+            <%= link_to "Change Password", user_edit_password_path(@user, id: user.id), remote: true,
+            class: "btn content-btn dashboard-button", style: "border: 1px solid black; margin-bottom: 4px; padding: 4px;" %>
+          <% end %>
         </div>
       </div>
     </div>
