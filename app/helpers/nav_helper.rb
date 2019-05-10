@@ -1,5 +1,29 @@
 module NavHelper
 
+  def home_path?
+    controller_name == 'users' && action_name == 'show'
+  end
+
+  def profile_path?
+    controller_name == 'users' && action_name == 'edit' && @user == current_user
+  end
+
+  def public_pages_path?
+    controller_name == 'public_pages' && PublicPage.pages.exclude?(action_name)
+  end
+
+  def users_path?
+    if @user.present? && current_user.present? && current_user == @user
+      controller_name == 'users' && action_name != 'edit' && action_name != 'show'
+    else
+      controller_name == 'users'
+    end
+  end
+
+  def services_path?
+    controller_name == 'service_areas'
+  end
+
   def active_nav?(name)
     case name
     when 'about'

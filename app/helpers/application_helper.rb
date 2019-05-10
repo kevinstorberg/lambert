@@ -1,21 +1,4 @@
 module ApplicationHelper
-
-  def home_path?
-    controller_name == 'users' && action_name == 'show'
-  end
-
-  def profile_path?
-    controller_name == 'users' && action_name == 'edit' && @user == current_user
-  end
-
-  def users_path?
-    controller_name == 'users' && action_name != 'edit' && action_name != 'show'
-  end
-
-  def services_path?
-    controller_name == 'service_areas'
-  end
-
   # ============================================================================
   # Data Formatters ============================================================
   # ============================================================================
@@ -100,7 +83,7 @@ module ApplicationHelper
   def enum_select(enums, sort = true)
   	sort ? enums.map {|k, v| [k.humanize, k] }.sort : enums.map {|k, v| [k.humanize, k] }
   end
-  
+
   # ============================================================================
   # Wrappers ===================================================================
   # ============================================================================

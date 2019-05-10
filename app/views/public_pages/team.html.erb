@@ -2,6 +2,12 @@
 
 </br>
 
+<div class="row">
+  <div class="basic-font col side-padding">
+    <%= @public_page.copy_0.html_safe if @public_page.copy_0.present? %>
+  </div>
+</div>
+
 <div id="team-bio-container">
   <%- if @team.any? %>
     <%- @team.each_with_index do |member, index| %>

@@ -1,0 +1,33 @@
+<div class="row">
+  <%= render partial: '/layouts/sidebar', locals: {  } %>
+  <div class="col-9">
+    <%= form_for @public_page do |f| %>
+      <div class="container settings-container">
+        <div class="row settings-row style="padding-top: 20px;">
+          <div class="col-12">
+            <%- if @public_page.errors.any? %>
+              <%- @public_page.errors.full_messages.each do |message| %>
+                <div class="alert alert-danger">
+                  <div><%= message %></div>
+                </div>
+              <% end %>
+            <% end %>
+
+            <div class="form-group">
+              <%= f.label :copy %>
+              <%= f.text_area :copy_0, class: "form-control" %>
+            </div>
+
+
+
+            <div class="form-group">
+              <%= f.submit "Save", class: "btn content-btn dashboard-button pull-right", style: "border: 1px solid black;" %>
+              <%= link_to "Back", public_pages_path, class: "btn content-btn dashboard-button", style: "border: 1px solid black;" %>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

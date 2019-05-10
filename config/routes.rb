@@ -12,13 +12,12 @@ Rails.application.routes.draw do
   get '/contact', to: 'public_pages#contact', as: 'contact'
   get '/team',    to: 'public_pages#team',    as: 'team'
 
-
+  resources :public_pages, only: [:edit, :index, :update]
 
   resources :service_areas
 
   resources :users do
     get :edit_password
-
     patch :update_password
   end
 end

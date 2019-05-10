@@ -1,0 +1,24 @@
+<div class="row">
+  <%= render partial: '/layouts/sidebar', locals: {  } %>
+  <div class="col-9">
+    <div id="services-index-container" class="dashboard-container">
+      <h3>Public Pages</h3>
+      <div class="table-responsive">
+        <table class="table table-condensed#users-listing">
+          <thead>
+            <tr class="background-muted">
+              <th style="width: 150px;">Title</th>
+              <th style="width: 150px;">Copy</th>
+          <tbody>
+            <%- @public_pages.each do |public_page| %>
+              <tr>
+                <td><%= link_to public_page.title.capitalize, edit_public_page_path(id: public_page.id) %></td>
+                <td><%= "#{public_page.copy_0.first(50)}. . ." if public_page.copy_0.present? %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
