@@ -31,21 +31,18 @@
         <%= link_to "Contact", contact_path, remote: true, class: "nav-link", id: "contact-link" %>
       </li>
 
-      <!-- <li class="nav-item nav-break">|</li>
-      <li class="nav-item">
-        <a href="tel:17189835050" class="nav-link">1.718.983.5050</a>
-      </li> -->
-
       <%- if current_user.present? %>
         <li class="nav-item nav-break">|</li>
         <li class="nav-item">
           <%= link_to 'Log Out', destroy_user_session_path, method: :delete, class: "nav-link" %>
         </li>
       <% else %>
-        <li class="nav-item nav-break">|</li>
-        <li class="nav-item">
-          <%= link_to 'Sign In', new_user_session_path, class: (active_nav?('signin') ? "active-nav-link nav-link" : "nav-link") %>
-        </li>
+        <% if Setting.display_login_link == "true" || true %>
+          <li class="nav-item nav-break">|</li>
+          <li class="nav-item">
+            <%= link_to 'Sign In', new_user_session_path, class: (active_nav?('signin') ? "active-nav-link nav-link" : "nav-link") %>
+          </li>
+        <% end %>
       <% end %>
     </ul>
   </div>

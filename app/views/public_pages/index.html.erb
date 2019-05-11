@@ -14,16 +14,18 @@
               <tr>
                 <td><h4><%= link_to public_page.title.capitalize, edit_public_page_path(id: public_page.id) %></h4></td>
                 <td>
-                  <p>
-                    <a class="btn btn-primary" data-toggle="collapse" href="#public-pages-copy-<%= public_page.id %>" role="button" aria-expanded="false" aria-controls="public-pages-copy-<%= public_page.id %>">
-                      Link with href
-                    </a>
-                  </p>
-                  <div class="collapse" id="public-pages-copy-<%= public_page.id %>">
-                    <div class="card card-body">
-                      <%= public_page.copy_0 if public_page.copy_0.present? %>
+                  <% if public_page.copy_0.present? %>
+                    <p>
+                      <a data-toggle="collapse" href="#public-pages-copy-<%= public_page.id %>" role="button" aria-expanded="false" aria-controls="public-pages-copy-<%= public_page.id %>">
+                        <%= truncate(public_page.copy_0.to_plain_text, length: 120, omission: ' . . .') %>
+                      </a>
+                    </p>
+                    <div class="collapse" id="public-pages-copy-<%= public_page.id %>">
+                      <div class="card card-body">
+                        <%= public_page.copy_0 %>
+                      </div>
                     </div>
-                  </div>
+                  <% end %>
                 </td>
               </tr>
             <% end %>

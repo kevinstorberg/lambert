@@ -21,6 +21,10 @@ module NavHelper
     controller_name == 'service_areas'
   end
 
+  def settings_path?
+    controller_name == 'settings'
+  end
+
   def active_nav?(name)
     case name
     when 'about'

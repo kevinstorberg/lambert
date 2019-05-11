@@ -20,4 +20,7 @@ Rails.application.routes.draw do
     get :edit_password
     patch :update_password
   end
+
+  get   '/settings/edit',   to: 'settings#edit',   as: 'edit_settings'
+  patch '/settings/update', to: 'settings#update', as: 'update_settings'
 end

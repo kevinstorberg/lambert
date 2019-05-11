@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-  # include RailsSettings::Extend
 
   has_one_attached :avatar
   has_rich_text :long_bio
@@ -9,7 +8,7 @@ class User < ApplicationRecord
 
   validates_presence_of :email, :first_name, :last_name, :role
 
-  scope :team, -> { where(role: ["admin", "super_admin"]) }
+  scope :team, -> { where(role: ["admin", "associate", "super_admin"]) }
 
   def full_name(flip = false)
     flip ? "#{last_name}, #{first_name}" : "#{first_name} #{last_name}"
@@ -25,9 +24,10 @@ class User < ApplicationRecord
   def self.role_types
     {
       admin: "Admin",
+      associate: "Associate",
       client: "Client",
-      developer: "Developer",
-      super_admin: "Super Admin"
+      # developer: "Developer",
+      # super_admin: "Super Admin"
     }
   end
 

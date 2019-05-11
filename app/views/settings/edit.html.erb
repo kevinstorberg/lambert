@@ -1,0 +1,24 @@
+<div class="row">
+  <%= render partial: '/layouts/sidebar', locals: {  } %>
+  <div class="col-9">
+    <%= form_tag update_settings_path, method: :patch do |f| %>
+      <div class="container settings-container">
+        <div class="row settings-row style="padding-top: 20px;">
+          <div class="col-12">
+
+            <div class="form-group">
+              <%= label_tag :display_login_link %>
+              <%= select_tag :display_login_link, options_for_select([['Show in Navbar', 'true'], ['Hide from View', 'false']], (Setting.display_login_link || 'true')), class: "form-control" %>
+            </div>
+
+            <div class="form-group">
+              <%= submit_tag "Save", class: "btn content-btn dashboard-button pull-right", style: "border: 1px solid black;" %>
+              <%= link_to "Home", root_path, class: "btn content-btn dashboard-button", style: "border: 1px solid black;" %>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
