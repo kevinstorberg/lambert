@@ -37,7 +37,7 @@
           <%= link_to 'Log Out', destroy_user_session_path, method: :delete, class: "nav-link" %>
         </li>
       <% else %>
-        <% if Setting.display_login_link == "true" || true %>
+        <% if Setting.display_login_link == "true" %>
           <li class="nav-item nav-break">|</li>
           <li class="nav-item">
             <%= link_to 'Sign In', new_user_session_path, class: (active_nav?('signin') ? "active-nav-link nav-link" : "nav-link") %>
