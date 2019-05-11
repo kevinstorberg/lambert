@@ -2,6 +2,8 @@ class User < ApplicationRecord
   # include RailsSettings::Extend
 
   has_one_attached :avatar
+  has_rich_text :long_bio
+  has_rich_text :short_bio
 
   devise :database_authenticatable, :recoverable, :rememberable, :validatable
 

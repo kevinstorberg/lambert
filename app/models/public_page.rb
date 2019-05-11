@@ -1,5 +1,7 @@
 class PublicPage < ApplicationRecord
 
+  has_rich_text :copy_0
+
   def self.pages
     ['about', 'home', 'team']
   end

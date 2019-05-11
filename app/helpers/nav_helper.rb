@@ -13,11 +13,8 @@ module NavHelper
   end
 
   def users_path?
-    if @user.present? && current_user.present? && current_user == @user
-      controller_name == 'users' && action_name != 'edit' && action_name != 'show'
-    else
-      controller_name == 'users'
-    end
+    return false if controller_name == 'users' && ['edit', 'show'].include?(action_name)
+    return true  if controller_name == 'users'
   end
 
   def services_path?

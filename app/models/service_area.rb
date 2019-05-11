@@ -1,5 +1,7 @@
 class ServiceArea < ApplicationRecord
 
+  has_rich_text :description
+
   has_many :service_sub_areas
 
   validates_presence_of :description, :headline, :title

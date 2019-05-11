@@ -78,17 +78,17 @@
     <% end %>
 
     <div class="row settings-row">
-      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <div class="col-12" >
         <div class="form-group">
           <%= f.label :short_bio %>
-          <%= f.text_area :short_bio, class: "form-control" %>
+          <%= f.rich_text_area :short_bio, class: "form-control" %>
         </div>
       </div>
 
-      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <div class="col-12">
         <div class="form-group">
           <%= f.label :long_bio %>
-          <%= f.text_area :long_bio, class: "form-control" %>
+          <%= f.rich_text_area :long_bio, class: "form-control" %>
         </div>
       </div>
     </div>

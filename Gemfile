@@ -46,12 +46,14 @@ gem "jquery-rails", "~> 4.3.3" # automate using jQuery with Rails
 gem "jquery-ui-rails", "~> 6.0.1" # jQuery UI for the Rails asset pipeline
 gem "js_cookie_rails", "~> 2.2.0" # adds js-cookie to the Rails asset pipeline
 # gem 'react-rails' # adds React.js to asset pipeline
+gem 'webpacker', '~> 4.x'
 
 # ==============================================================================
 # Forms ========================================================================
 # ==============================================================================
+gem 'actiontext', github: 'kobaltz/actiontext', branch: 'archive', require: 'action_text'
 gem "cocoon", "~> 1.2.11" # for dynamic nested forms using jQuery
-gem "trix" # rich text editor for everyday writing
+gem 'image_processing' # compliments actiontext
 
 # ==============================================================================
 # File Reading, Uploading, And Generation ======================================
