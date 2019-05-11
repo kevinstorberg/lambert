@@ -34,3 +34,28 @@
     }
   }
 }
+
+trix-editor {
+  overflow-y: auto;
+  div {
+    height: 3000px !important;
+    overflow-y: auto;
+  }
+}
+
+// =============================================================================
+// =============================================================================
+// =============================================================================
+.rich-text-area-large {
+  trix-editor {
+    overflow-y: auto !important;
+    height: 400px !important;
+  }
+}
+
+.rich-text-area-small {
+  trix-editor {
+    overflow-y: auto !important;
+    height: 200px !important;
+  }
+}

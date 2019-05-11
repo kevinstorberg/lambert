@@ -1,12 +1,14 @@
 <%= video_tag "nyc_train_compressed.mp4", autoplay: true, loop: true, muted: true, id: "homeVideo", class: "img-thumbnail" %>
 
-<div id="home-page-copy-container" class="container">
-  <div class="row">
-    <div class="basic-font col side-padding">
-      <%= @public_page.copy_0.html_safe if @public_page.copy_0.present? %>
+<% if @public_page.copy_0.present? %>
+  <div id="home-page-copy-container" class="container">
+    <div class="row">
+      <div class="basic-font col side-padding">
+        <%= @public_page.copy_0 %>
+      </div>
     </div>
   </div>
-</div>
+<% end %>
 
 <script>
   $(document).ready(function() {

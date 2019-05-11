@@ -13,8 +13,8 @@
               <% end %>
             <% end %>
 
-            <div class="form-group">
-              <%= f.label :copy %>
+            <div class="form-group rich-text-area-large">
+              <%= f.label :copy, "Edit #{@public_page.title.capitalize} Page" %>
               <%= f.rich_text_area :copy_0, class: "form-control" %>
             </div>
 

@@ -12,8 +12,19 @@
           <tbody>
             <%- @public_pages.each do |public_page| %>
               <tr>
-                <td><%= link_to public_page.title.capitalize, edit_public_page_path(id: public_page.id) %></td>
-                <td><%= "#{public_page.copy_0.first(50)}. . ." if public_page.copy_0.present? %></td>
+                <td><h4><%= link_to public_page.title.capitalize, edit_public_page_path(id: public_page.id) %></h4></td>
+                <td>
+                  <p>
+                    <a class="btn btn-primary" data-toggle="collapse" href="#public-pages-copy-<%= public_page.id %>" role="button" aria-expanded="false" aria-controls="public-pages-copy-<%= public_page.id %>">
+                      Link with href
+                    </a>
+                  </p>
+                  <div class="collapse" id="public-pages-copy-<%= public_page.id %>">
+                    <div class="card card-body">
+                      <%= public_page.copy_0 if public_page.copy_0.present? %>
+                    </div>
+                  </div>
+                </td>
               </tr>
             <% end %>
           </tbody>

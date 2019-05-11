@@ -1,12 +1,12 @@
-<h4 class="fancy-font">| About</h4>
+<h4 class="fancy-font page-title">About</h4>
 
-</br>
-
-<div class="row">
-  <div class="basic-font col side-padding">
-    <%= @public_page.copy_0.html_safe if @public_page.copy_0.present? %>
+<% if @public_page.copy_0.present? %>
+  <div class="row" style="margin-bottom: 15px; margin-top: 15px;">
+    <div class="basic-font col side-padding">
+      <%= @public_page.copy_0 %>
+    </div>
   </div>
-</div>
+<% end %>
 
 <% if @service_areas.any? %>
   <div class="row" style="margin-bottom: 60px;">

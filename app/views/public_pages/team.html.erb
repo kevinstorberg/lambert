@@ -1,12 +1,12 @@
-<h4 class="fancy-font">| Our Team</h4>
+<h4 class="fancy-font page-title">Our Team</h4>
 
-</br>
-
-<div class="row">
-  <div class="basic-font col side-padding">
-    <%= @public_page.copy_0.html_safe if @public_page.copy_0.present? %>
+<% if @public_page.copy_0.present? %>
+  <div class="row" style="margin-bottom: 15px; margin-top: 15px;">
+    <div class="basic-font col side-padding">
+      <%= @public_page.copy_0 %>
+    </div>
   </div>
-</div>
+<% end %>
 
 <div id="team-bio-container">
   <%- if @team.any? %>
